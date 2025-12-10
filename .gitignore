@@ -1,0 +1,9 @@
+# Ignorar arquivos temporários do Visual Studio
+.vs/
+
+# Ignorar arquivos de compilação (binários)
+bin/
+obj/
+
+# Ignorar configurações específicas de usuário
+*.user
