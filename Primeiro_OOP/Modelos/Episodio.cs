@@ -1,9 +1,11 @@
-﻿class Episodio
+﻿namespace ScreenSound.Modelos;
+
+internal class Episodio
 {
-    public string Titulo { get; set; }
-    public int Duracao { get; set; } // Duração em minutos
-    public int Ordem { get; set; }
-    public string Resumo { get; set; }
+    public string Titulo { get;   }
+    public int Duracao { get;   } // Duração em minutos
+    public int Ordem { get;   }
+    public string Resumo { get;   }
 
     public void Exibir()
     {

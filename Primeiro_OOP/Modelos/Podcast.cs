@@ -1,8 +1,15 @@
-﻿class Podcast
+﻿namespace ScreenSound.Modelos;
+
+internal class Podcast
 {
-    public string Nome { get; set; }
-    public string Host { get; set; }
-    public List<Episodio> TotalEpisodios { get; set; }
+    public string Nome { get; }
+    public string Host { get; }
+    private List<Episodio> totalEpisodios = new List<Episodio>();
+
+    public void AdicionarEpisodio(Episodio episodio)
+    {
+        totalEpisodios.Add(episodio);
+    }
     public Podcast(string title, string host)
     {
         Nome = title;
@@ -12,11 +19,11 @@
     {
         Nome = title;
         Host = host;
-        TotalEpisodios = episodios;
+        totalEpisodios = episodios;
     }
     public void ExibirEps() 
     {
-        foreach(Episodio ep in TotalEpisodios)
+        foreach(Episodio ep in totalEpisodios)
         {
             ep.Exibir();
         }
